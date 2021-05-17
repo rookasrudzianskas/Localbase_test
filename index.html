@@ -21,10 +21,8 @@
         buttonDoStuff.addEventListener('click', doStuff)
 
         function doStuff() {
-            db.collection('users').doc({ id: 2 }).set({
-                id: 6,
-                name: "Molly",
-                age: 34343,
+            db.collection('users').orderBy('age', 'desc').get().then(users => {
+                console.log(users)
             })
         }
     </script>
