@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LocalBase Vanilla</title>
+</head>
+<body>
+    <h1>Localbase</h1>
+    <button id="do-stuff">Do stuff</button>
+
+    <script src="https://unpkg.com/localbase/dist/localbase.dev.js"></script>
+
+    <script>
+        let db = new Localbase('db')
+
+        let buttonDoStuff = document.getElementById('do-stuff')
+
+        buttonDoStuff.addEventListener('click', doStuff)
+
+        function doStuff() {
+            console.log("do stuff");
+        }
+    </script>
+</body>
+</html>
