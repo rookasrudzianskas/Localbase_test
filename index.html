@@ -21,9 +21,7 @@
         buttonDoStuff.addEventListener('click', doStuff)
 
         function doStuff() {
-            db.collection('users').orderBy('age', 'desc').get().then(users => {
-                console.log(users)
-            })
+            db.collection('users').delete();
         }
     </script>
 </body>
