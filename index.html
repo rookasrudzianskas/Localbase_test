@@ -21,7 +21,11 @@
         buttonDoStuff.addEventListener('click', doStuff)
 
         function doStuff() {
-            console.log("do stuff");
+            db.collection('users').doc({ id: 2 }).set({
+                id: 6,
+                name: "Molly",
+                age: 34343,
+            })
         }
     </script>
 </body>
